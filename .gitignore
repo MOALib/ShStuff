@@ -1,0 +1,25 @@
+# Spoopy-Spooky scary skeleton golbby-gobby glob
+*
+
+# Git specific
+!.git*
+
+# Texts
+!LICENSE
+!README.*
+
+# Libs
+!libs/
+!*.sh
+
+# Test
+!test/
+!test/*
+
+# modules
+!modules/
+!modules/.keep
+
+# VS-Code
+!/.vscode/
+!/.vscode/settings.json
