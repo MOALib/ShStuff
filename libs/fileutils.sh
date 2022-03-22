@@ -79,6 +79,33 @@ mxpsql_shstuff_fileutils_write(){
     TEXT="$2";
 
     if test -f "$FILE"; then
+        echo "$TEXT" > "$FILE";
+    else
+        echo "The file doesn't exist";
+        return 1;
+    fi
+
+    # Unset variables
+    FILE=;TEXT=;
+
+    return 0;
+}
+
+# @brief apend text a file
+# @param $1 The file path
+# @param $2 The text to append
+# @returns Nothing if there is no problem
+# @stdout Nothing if there is no problem
+# @exitcode 0 if there is no problem
+# @exitcode 1 if there is a problem
+# @example
+#       mxpsql_shstuff_fileutils_write $FILE_PATH $TEXT
+mxpsql_shstuff_fileutils_append(){
+    # Set variables
+    FILE="$1";
+    TEXT="$2";
+
+    if test -f "$FILE"; then
         echo "$TEXT" >> "$FILE";
     else
         echo "The file doesn't exist";
