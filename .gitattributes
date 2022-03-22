@@ -1,0 +1,5 @@
+* eol=lf
+* text=auto
+
+libs/* eol=lf
+libs/* text=auto
