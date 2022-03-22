@@ -112,6 +112,15 @@ mxpsql_shstuff_sui_term_cursor_move_column(){
     fi
 }
 
+# @brief Move cursor to bottom
+# @noargs
+# @example
+#       mxpsql_shstuff_sui_term_cursor_move_bottom
+mxpsql_shstuff_sui_term_cursor_goto_bottom(){
+    mxpsql_shstuff_sui_term_get_size;
+    printf '\e[%sH' "$LINES";
+}
+
 # @brief enable or disable line wrapping
 # @param $1 true to enable, false to disable
 # @example
